@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #c2d4db;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== Header ========= */
+
+header {
+  display: inline;
+}
+
+/* ========== Jumbotron ==========*/
+
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #274457;
+  text-align: center;
+  color: #f8f8ff;
+}
+
+header .jumbotron .p {
+  font-size: 12px;
+  color: #b4bad0;
+}
+
+/* ========== NavBar ========= */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #274457;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  font-size: 18px;
+
+  font-weight: 400;
+  text-decoration: none;
+
+  color: #b4bad0;
+}
+
+nav a:hover {
+  font-weight: bold;
+  size: 20px;
+  color: #47cbfa;
+}
+
+.logo {
+  margin-left: 30px;
+  color: #f8f8ff;
+}
+
+.logo span {
+  color: #47cbfa;
+}
+
+/* ========== Main ========= */
+
+main {
+  padding: 20px;
+  display: flex;
+  gap: 1.5rem;
+  color: #777f8c;
+}
+
+main h1 {
+  color: #2a2438;
+}
+
+h2,
+h3 {
+  color: #da0037;
+}
+
+#content {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+
+aside {
+  flex: 1;
+}
+
+footer {
+  padding: 20px;
+  color: #f8f8ff;
+  background-color: #274457;
+  text-align: center;
+  font-weight: bold;
+  clear: both;
+
+  text-align: center;
+  font-weight: bold;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile img {
+  width: 200px;
+}
+
+.card {
+  display: flex;
+  background-color: #f3f4f6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.card-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card h2 {
+  color: #3498db;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.profile {
+  background-color: #f3f4f6;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile header {
+  margin-bottom: 20px;
+}
+
+.profile header h2 {
+  color: #3498db;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.profile header p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.profile figure {
+  margin: 0;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile figcaption {
+  font-size: 14px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.profile section {
+  width: 100%;
+}
+
+.profile section h3 {
+  color: #3498db;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.profile table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.profile table th,
+.profile table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.profile table th {
+  width: 120px;
+  color: #3498db;
+}
+
+.profile table td {
+  color: #555;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    display: none;
+    justify-content: center;
+  }
+  main aside {
+    align-self: stretch;
+  }
+}
