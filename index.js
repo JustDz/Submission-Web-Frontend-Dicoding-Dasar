@@ -1,14 +1,34 @@
-// Menambahkan event listener untuk setiap tautan
+// Reveal on scroll
+
+function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
+
+  reveals.forEach((element) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = element.getBoundingClientRect().top;
+    const elementBottom = element.getBoundingClientRect().bottom;
+    const elementVisible = 100;
+
+    if (elementTop < windowHeight - elementVisible && elementBottom > 0) {
+      element.classList.add("visible");
+    } else {
+      element.classList.remove("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+document.addEventListener("DOMContentLoaded", revealOnScroll);
+
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    // Menghindari perilaku default (langsung ke target)
     e.preventDefault();
 
-    // Mengambil ID dari href (misalnya, #section1)
     const targetId = this.getAttribute("href").substring(1);
     const targetElement = document.getElementById(targetId);
 
-    // Jika elemen ditemukan, gulir ke elemen tersebut dengan smooth scroll
     if (targetElement) {
       targetElement.scrollIntoView({
         behavior: "smooth",
